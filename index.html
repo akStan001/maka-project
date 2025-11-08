@@ -6,6 +6,10 @@
     <title>MakkyDualCare - Premium Automotive & Luxury Laundry Services</title>
     <meta name="description" content="Experience premium tyre services at Makky's Autohub and luxury dry cleaning at Makky's Laundry Haven. Quality you can trust.">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%234f46e5'/><text x='50%' y='50%' font-size='48' text-anchor='middle' alignment-baseline='middle' font-family='Arial' fill='white'>MDC</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%234f46e5'/><text x='50%' y='50%' font-size='48' text-anchor='middle' alignment-baseline='middle' font-family='Arial' fill='white'>MDC</text></svg>">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -57,6 +61,37 @@
             max-width: 100%;
             overflow-x: hidden;
         }
+        
+        /* Navigation text always visible - no hover required */
+        .nav-link {
+            color: #1f2937 !important; /* gray-800 */
+        }
+        
+        .nav-link:hover {
+            color: #2563eb !important; /* blue-600 */
+        }
+        
+        /* Active state for current page */
+        .nav-link.active {
+            color: #2563eb !important;
+        }
+        
+        /* Social media animations */
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .tiktok-icon:hover {
+            background: linear-gradient(45deg, #ff0050, #00f2ea) !important;
+        }
+        
+        .instagram-icon:hover {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important;
+        }
     </style>
 </head>
 <body class="font-sans bg-white">
@@ -66,7 +101,7 @@
         <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
     </div>
 
-    <!-- Navigation -->
+    <!-- Navigation - UPDATED WITH ALWAYS VISIBLE TEXT -->
     <nav id="mainNav" class="fixed top-0 w-full z-50 transition-all duration-500 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
@@ -81,21 +116,21 @@
                     </div>
                 </a>
 
-                <!-- Desktop Menu -->
+                <!-- Desktop Menu - UPDATED: Text always black, no hover required -->
                 <div class="hidden lg:flex items-center space-x-6">
-                    <a href="index.html" class="nav-link text-blue-600 font-semibold relative text-sm text-black">
+                    <a href="index.html" class="nav-link active text-sm font-semibold relative">
                         Home
                         <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="tyres.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 relative text-sm group text-black">
+                    <a href="tyres.html" class="nav-link text-sm font-medium relative group">
                         Autohub
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transform scale-x-0 transition-all duration-300 group-hover:scale-x-100"></span>
                     </a>
-                    <a href="laundry.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 relative text-sm group text-black">
+                    <a href="laundry.html" class="nav-link text-sm font-medium relative group">
                         Laundry Haven
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transform scale-x-0 transition-all duration-300 group-hover:scale-x-100"></span>
                     </a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 relative text-sm group text-black">
+                    <a href="#contact" class="nav-link text-sm font-medium relative group">
                         Contact
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transform scale-x-0 transition-all duration-300 group-hover:scale-x-100"></span>
                     </a>
@@ -106,20 +141,20 @@
                     <i class="fas fa-bars text-lg"></i>
                 </button>
 
-                <!-- WhatsApp Button -->
+                <!-- WhatsApp Button - KEPT AS IS -->
                 <a href="https://wa.me/2349059402473" target="_blank" class="hidden lg:flex items-center bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group text-sm">
                     <i class="fab fa-whatsapp mr-2"></i>
                     Order Now
                 </a>
             </div>
 
-            <!-- Mobile Menu -->
+            <!-- Mobile Menu - UPDATED: Text always visible -->
             <div id="mobileMenu" class="lg:hidden hidden mt-4 pb-4 border-t border-gray-200 pt-4 bg-white/95 backdrop-blur-md rounded-xl shadow-xl">
                 <div class="flex flex-col space-y-2">
-                    <a href="index.html" class="nav-link text-blue-600 font-semibold py-2 px-4 bg-blue-50 rounded-lg border-l-4 border-blue-600 text-sm">Home</a>
-                    <a href="tyres.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2 px-4 hover:bg-gray-50 rounded-lg border-l-4 border-transparent hover:border-blue-600 text-sm">Autohub</a>
-                    <a href="laundry.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2 px-4 hover:bg-gray-50 rounded-lg border-l-4 border-transparent hover:border-blue-600 text-sm">Laundry Haven</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2 px-4 hover:bg-gray-50 rounded-lg border-l-4 border-transparent hover:border-blue-600 text-sm">Contact</a>
+                    <a href="index.html" class="nav-link active py-2 px-4 bg-blue-50 rounded-lg border-l-4 border-blue-600 text-sm font-semibold">Home</a>
+                    <a href="tyres.html" class="nav-link py-2 px-4 hover:bg-gray-50 rounded-lg border-l-4 border-transparent hover:border-blue-600 text-sm font-medium">Autohub</a>
+                    <a href="laundry.html" class="nav-link py-2 px-4 hover:bg-gray-50 rounded-lg border-l-4 border-transparent hover:border-blue-600 text-sm font-medium">Laundry Haven</a>
+                    <a href="#contact" class="nav-link py-2 px-4 hover:bg-gray-50 rounded-lg border-l-4 border-transparent hover:border-blue-600 text-sm font-medium">Contact</a>
                     <a href="https://wa.me/2349059402473" target="_blank" class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2 rounded-xl font-semibold transition-all duration-300 text-center mt-2 flex items-center justify-center text-sm">
                         <i class="fab fa-whatsapp mr-2"></i>
                         Order via WhatsApp
@@ -129,7 +164,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section - FIXED MOBILE RESPONSIVENESS -->
+    <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <!-- Background -->
         <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
@@ -206,7 +241,7 @@
         </div>
     </section>
 
-    <!-- Doorstep Delivery Section - MOBILE OPTIMIZED -->
+    <!-- Doorstep Delivery Section -->
     <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div class="container mx-auto px-4">
             <div class="max-w-6xl mx-auto">
@@ -283,7 +318,7 @@
         </div>
     </section>
 
-    <!-- Services Showcase - MOBILE OPTIMIZED -->
+    <!-- Services Showcase -->
     <section class="py-12 sm:py-16 md:py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12" data-aos="fade-up">
@@ -379,7 +414,7 @@
         </div>
     </section>
 
-    <!-- CTA Section - MOBILE OPTIMIZED -->
+    <!-- CTA Section -->
     <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-serif" data-aos="fade-up">Ready to Experience Excellence?</h2>
@@ -400,11 +435,11 @@
         </div>
     </section>
 
-    <!-- Footer - MOBILE OPTIMIZED -->
+    <!-- Footer - UPDATED WITH SOCIAL MEDIA -->
     <footer class="bg-gradient-to-br from-gray-900 to-black text-white pt-12 pb-8" id="contact">
         <div class="container mx-auto px-4">
             <div class="grid lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
-                <!-- Brand -->
+                <!-- Brand - UPDATED WITH SOCIAL MEDIA ICONS -->
                 <div class="lg:col-span-1">
                     <div class="flex items-center space-x-2 mb-4">
                         <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
@@ -418,6 +453,28 @@
                     <p class="text-gray-400 mb-4 leading-relaxed text-sm">
                         Excellence in automotive services and luxury garment care. Two trusted services, one exceptional experience.
                     </p>
+                    
+                    <!-- Social Media Section - CREATIVE & INTERACTIVE -->
+                    <div class="mb-4">
+                        <h4 class="text-sm font-semibold text-white mb-3">Follow Us</h4>
+                        <div class="flex space-x-3">
+                            <!-- TikTok -->
+                            <a href="https://www.tiktok.com/@makky_dual_care" target="_blank" class="social-icon tiktok-icon w-10 h-10 bg-gray-800 hover:bg-black rounded-xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-lg">
+                                <i class="fab fa-tiktok text-white text-lg"></i>
+                            </a>
+                            
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/makky_dual_care?igsh=ZmtwbDJwZ3Fna3E0&utm_source=qr" target="_blank" class="social-icon instagram-icon w-10 h-10 bg-gray-800 hover:bg-black rounded-xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-lg">
+                                <i class="fab fa-instagram text-white text-lg"></i>
+                            </a>
+
+                          
+                            <!-- WhatsApp - KEPT AS IS -->
+                            <a href="https://wa.me/2349059402473" target="_blank" class="social-icon w-10 h-10 bg-gray-800 hover:bg-green-500 rounded-xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-lg">
+                                <i class="fab fa-whatsapp text-white text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Locations -->
@@ -445,17 +502,17 @@
                 <div>
                     <h3 class="text-base font-bold mb-4 text-white">Contact Info</h3>
                     <div class="space-y-2">
-                        <a href="tel:+2349059402473" class="flex items-center text-gray-400 hover:text-white transition-all duration-300 text-sm">
+                        <a href="tel:+2348119898342" class="flex items-center text-gray-400 hover:text-white transition-all duration-300 text-sm">
                             <i class="fas fa-phone-alt mr-3 text-amber-400 text-xs"></i>
-                            +2349059402473
+                            +2348119898342
                         </a>
-                        <a href="https://wa.me/2349059402473" target="_blank" class="flex items-center text-gray-400 hover:text-white transition-all duration-300 text-sm">
+                        <a href="https://wa.me/2347073857015" target="_blank" class="flex items-center text-gray-400 hover:text-white transition-all duration-300 text-sm">
                             <i class="fab fa-whatsapp mr-3 text-green-400 text-xs"></i>
                             WhatsApp Order
                         </a>
-                        <a href="mailto:akeemgbolahan58@gmail.com" class="flex items-center text-gray-400 hover:text-white transition-all duration-300 text-sm">
+                        <a href="mailto:makkydualcare@gmail.com" class="flex items-center text-gray-400 hover:text-white transition-all duration-300 text-sm">
                             <i class="fas fa-envelope mr-3 text-blue-400 text-xs"></i>
-                            akeemgbolahan58@gmail.com
+                            makkydualcare@gmail.com
                         </a>
                     </div>
                 </div>
@@ -486,4 +543,3 @@
     <script src="js/main.js"></script>
 </body>
 </html>
-
