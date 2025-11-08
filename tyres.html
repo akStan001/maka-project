@@ -2,23 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Makky's Autohub - Premium Tyre Services & Car Accessories | MakkyDualCare</title>
     <meta name="description" content="Premium tyre services, wheel alignment, balancing, and luxury car accessories including seat covers, steering covers, engine oil, and more.">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- AOS CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     
     <style>
         .font-sans { font-family: 'Inter', sans-serif; }
         .font-serif { font-family: 'Playfair Display', serif; }
+        
+        /* Mobile-first responsive fixes */
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+            }
+            .hero-subtitle {
+                font-size: 1.25rem !important;
+                line-height: 1.4 !important;
+            }
+            .hero-description {
+                font-size: 1rem !important;
+                line-height: 1.5 !important;
+            }
+            .cta-button {
+                padding: 0.75rem 1.5rem !important;
+                font-size: 0.875rem !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
+        
+        /* Prevent horizontal scroll */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
     </style>
 </head>
 <body class="font-sans bg-white">
@@ -27,31 +65,31 @@
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center space-x-3 group">
-                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <span class="text-white font-bold text-lg">MDC</span>
+                <a href="index.html" class="flex items-center space-x-2 group">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <span class="text-white font-bold text-sm">MDC</span>
                     </div>
-                    <div>
-                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">MakkyDualCare</span>
+                    <div class="hidden sm:block">
+                        <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">MakkyDualCare</span>
                         <p class="text-xs text-gray-500 -mt-1">Premium Services</p>
                     </div>
                 </a>
 
                 <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group">
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 relative text-sm group">
                         Home
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transform scale-x-0 transition-all duration-300 group-hover:scale-x-100"></span>
                     </a>
-                    <a href="tyres.html" class="nav-link text-blue-600 font-semibold relative">
+                    <a href="tyres.html" class="nav-link text-blue-600 font-semibold relative text-sm">
                         Autohub
                         <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="laundry.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group">
+                    <a href="laundry.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 relative text-sm group">
                         Laundry Haven
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transform scale-x-0 transition-all duration-300 group-hover:scale-x-100"></span>
                     </a>
-                    <a href="index.html#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group">
+                    <a href="index.html#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 relative text-sm group">
                         Contact
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transform scale-x-0 transition-all duration-300 group-hover:scale-x-100"></span>
                     </a>
@@ -59,24 +97,24 @@
 
                 <!-- Mobile Menu Button -->
                 <button id="mobileMenuButton" class="lg:hidden text-gray-700 hover:text-blue-600 transition-colors duration-300 p-2">
-                    <i class="fas fa-bars text-xl"></i>
+                    <i class="fas fa-bars text-lg"></i>
                 </button>
 
                 <!-- WhatsApp Button -->
-                <a href="https://wa.me/2349059402473?text=Hi, I'm interested in your tyre services or car accessories:" target="_blank" class="hidden lg:flex items-center bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group">
-                    <i class="fab fa-whatsapp mr-2 text-lg"></i>
+                <a href="https://wa.me/2349059402473?text=Hi, I'm interested in your tyre services or car accessories:" target="_blank" class="hidden lg:flex items-center bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group text-sm">
+                    <i class="fab fa-whatsapp mr-2"></i>
                     Get Quote
                 </a>
             </div>
 
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="lg:hidden hidden mt-4 pb-4 border-t border-gray-200 pt-4 bg-white/95 backdrop-blur-md rounded-xl shadow-xl">
-                <div class="flex flex-col space-y-3">
-                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 py-3 px-4 hover:bg-gray-50 rounded-lg border-l-4 border-transparent hover:border-blue-600">Home</a>
-                    <a href="tyres.html" class="nav-link text-blue-600 font-semibold py-3 px-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">Autohub</a>
-                    <a href="laundry.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 py-3 px-4 hover:bg-gray-50 rounded-lg border-l-4 border-transparent hover:border-blue-600">Laundry Haven</a>
-                    <a href="index.html#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 py-3 px-4 hover:bg-gray-50 rounded-lg border-l-4 border-transparent hover:border-blue-600">Contact</a>
-                    <a href="https://wa.me/2349059402473?text=Hi, I'm interested in your tyre services or car accessories:" target="_blank" class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 text-center mt-2 flex items-center justify-center">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2 px-4 hover:bg-gray-50 rounded-lg border-l-4 border-transparent hover:border-blue-600 text-sm">Home</a>
+                    <a href="tyres.html" class="nav-link text-blue-600 font-semibold py-2 px-4 bg-blue-50 rounded-lg border-l-4 border-blue-600 text-sm">Autohub</a>
+                    <a href="laundry.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2 px-4 hover:bg-gray-50 rounded-lg border-l-4 border-transparent hover:border-blue-600 text-sm">Laundry Haven</a>
+                    <a href="index.html#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2 px-4 hover:bg-gray-50 rounded-lg border-l-4 border-transparent hover:border-blue-600 text-sm">Contact</a>
+                    <a href="https://wa.me/2349059402473?text=Hi, I'm interested in your tyre services or car accessories:" target="_blank" class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2 rounded-xl font-semibold transition-all duration-300 text-center mt-2 flex items-center justify-center text-sm">
                         <i class="fab fa-whatsapp mr-2"></i>
                         Get Quote
                     </a>
@@ -85,36 +123,35 @@
         </div>
     </nav>
 
-    <!-- Hero Banner - ENHANCED DESIGN -->
-    <section class="pt-32 pb-20 bg-gradient-to-br from-orange-500 via-amber-500 to-red-500 text-white relative overflow-hidden">
+    <!-- Hero Banner - MOBILE OPTIMIZED -->
+    <section class="pt-20 pb-12 sm:pb-16 md:pb-20 bg-gradient-to-br from-orange-500 via-amber-500 to-red-500 text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-black/30"></div>
         
         <!-- Animated Background Elements -->
-        <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-        <div class="absolute bottom-10 right-10 w-32 h-32 bg-white/10 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
-        <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-white/10 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+        <div class="absolute top-10 left-10 w-12 h-12 bg-white/10 rounded-full animate-pulse"></div>
+        <div class="absolute bottom-10 right-10 w-20 h-20 bg-white/10 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
         
-        <div class="relative container mx-auto px-6 text-center">
-            <div class="max-w-5xl mx-auto">
-                <h1 class="text-5xl lg:text-7xl font-bold mb-6 font-serif">
-                    <span class="text-white drop-shadow-2xl">Makky's Autohub</span>
+        <div class="relative container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 font-serif leading-tight text-white">
+                    Makky's Autohub
                 </h1>
-                <p class="text-2xl lg:text-3xl mb-8 font-light opacity-95 drop-shadow-lg">
+                <p class="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 font-light opacity-95 leading-relaxed">
                     Premium Tyre Services & Luxury Car Accessories
                 </p>
-                <p class="text-xl max-w-3xl mx-auto opacity-90 leading-relaxed drop-shadow">
+                <p class="hero-description text-base sm:text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90 leading-relaxed px-4">
                     Complete automotive care solutions. From precision tyre services to premium car accessories, 
                     we enhance your driving experience with quality and style.
                 </p>
                 
                 <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12" data-aos="fade-up" data-aos-delay="200">
-                    <a href="#services" class="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center">
-                        <i class="fas fa-tools mr-3"></i>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center items-center px-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#services" class="cta-button bg-white text-orange-600 hover:bg-gray-100 px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center w-full sm:w-auto text-sm sm:text-base">
+                        <i class="fas fa-tools mr-2 text-sm"></i>
                         Our Services
                     </a>
-                    <a href="#accessories" class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center">
-                        <i class="fas fa-star mr-3"></i>
+                    <a href="#accessories" class="cta-button bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center w-full sm:w-auto text-sm sm:text-base">
+                        <i class="fas fa-star mr-2 text-sm"></i>
                         View Accessories
                     </a>
                 </div>
@@ -122,416 +159,374 @@
         </div>
     </section>
 
-    <!-- Services Grid -->
-    <section id="services" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-serif">Professional Tyre Services</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Expert care for your vehicle's performance and safety</p>
+    <!-- Services Grid - MOBILE OPTIMIZED -->
+    <section id="services" class="py-12 sm:py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 font-serif">Professional Tyre Services</h2>
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">Expert care for your vehicle's performance and safety</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
                 <!-- Service 1 -->
-                <div data-aos="fade-up" data-aos-delay="100" class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="100" class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                    <div class="h-40 bg-gradient-to-br from-blue-500 to-blue-600 relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                                <i class="fas fa-tire text-blue-600 text-xl"></i>
+                        <div class="absolute bottom-3 left-3">
+                            <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                                <i class="fas fa-tire text-blue-600 text-sm"></i>
                             </div>
                         </div>
-                        <img src="https://akstan001.github.io/makky-sDualCare/imageTire2.jpeg" 
+                        <img src="images/premium tyre.png" 
                              alt="Premium Tyre Sales" 
                              class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Premium Tyre Sales</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
+                    <div class="p-4">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Premium Tyre Sales</h3>
+                        <p class="text-gray-600 mb-3 leading-relaxed text-sm">
                             Top-quality tyres from trusted brands with expert fitting and warranty support.
                         </p>
-                        <div class="flex items-center text-blue-600 font-semibold">
-                            <span>Get Quote</span>
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
+                       
                     </div>
                 </div>
 
                 <!-- Service 2 -->
-                <div data-aos="fade-up" data-aos-delay="200" class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="150" class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                    <div class="h-40 bg-gradient-to-br from-purple-500 to-purple-600 relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                                <i class="fas fa-cogs text-purple-600 text-xl"></i>
+                        <div class="absolute bottom-3 left-3">
+                            <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                                <i class="fas fa-cogs text-purple-600 text-sm"></i>
                             </div>
                         </div>
                         <img src="images/precsion alignment.png" 
                              alt="Wheel Alignment" 
                              class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Precision Alignment</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
+                    <div class="p-4">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Precision Alignment</h3>
+                        <p class="text-gray-600 mb-3 leading-relaxed text-sm">
                             Advanced wheel alignment for optimal handling, safety, and extended tyre life.
                         </p>
-                        <div class="flex items-center text-purple-600 font-semibold">
-                            <span>Get Service</span>
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
+                       
                     </div>
                 </div>
 
                 <!-- Service 3 -->
-                <div data-aos="fade-up" data-aos-delay="300" class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-amber-500 to-amber-600 relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="200" class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                    <div class="h-40 bg-gradient-to-br from-amber-500 to-amber-600 relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                                <i class="fas fa-toolbox text-amber-600 text-xl"></i>
+                        <div class="absolute bottom-3 left-3">
+                            <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                                <i class="fas fa-toolbox text-amber-600 text-sm"></i>
                             </div>
                         </div>
                         <img src="images/expert repair.png" 
                              alt="Puncture Repair" 
                              class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Expert Repair</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
+                    <div class="p-4">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Expert Repair</h3>
+                        <p class="text-gray-600 mb-3 leading-relaxed text-sm">
                             Professional puncture repairs and maintenance to keep you safely on the road.
                         </p>
-                        <div class="flex items-center text-amber-600 font-semibold">
-                            <span>Repair Now</span>
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
+                        
                     </div>
                 </div>
 
                 <!-- Service 4 -->
-                <div data-aos="fade-up" data-aos-delay="400" class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="250" class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                    <div class="h-40 bg-gradient-to-br from-green-500 to-green-600 relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                                <i class="fas fa-balance-scale text-green-600 text-xl"></i>
+                        <div class="absolute bottom-3 left-3">
+                            <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                                <i class="fas fa-balance-scale text-green-600 text-sm"></i>
                             </div>
                         </div>
                         <img src="images/wheel balancing.png" 
                              alt="Wheel Balancing" 
                              class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Wheel Balancing</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
+                    <div class="p-4">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Wheel Balancing</h3>
+                        <p class="text-gray-600 mb-3 leading-relaxed text-sm">
                             Perfect wheel balancing for smooth rides and extended tyre longevity.
                         </p>
-                        <div class="flex items-center text-green-600 font-semibold">
-                            <span>Balance Now</span>
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
+                        
                     </div>
                 </div>
 
                 <!-- Service 5 -->
-                <div data-aos="fade-up" data-aos-delay="500" class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-red-500 to-red-600 relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="300" class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                    <div class="h-40 bg-gradient-to-br from-red-500 to-red-600 relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                                <i class="fas fa-wrench text-red-600 text-xl"></i>
+                        <div class="absolute bottom-3 left-3">
+                            <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                                <i class="fas fa-wrench text-red-600 text-sm"></i>
                             </div>
                         </div>
                         <img src="images/professional fitting.png" 
                              alt="Tyre Fitment" 
                              class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Professional Fitment</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
+                    <div class="p-4">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Professional Fitment</h3>
+                        <p class="text-gray-600 mb-3 leading-relaxed text-sm">
                             Expert tyre fitting using state-of-the-art equipment and techniques.
                         </p>
-                        <div class="flex items-center text-red-600 font-semibold">
-                            <span>Get Fitted</span>
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
+                       
                     </div>
                 </div>
 
                 <!-- Service 6 -->
-                <div data-aos="fade-up" data-aos-delay="600" class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-indigo-600 relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="350" class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                    <div class="h-40 bg-gradient-to-br from-indigo-500 to-indigo-600 relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                                <i class="fas fa-car text-indigo-600 text-xl"></i>
+                        <div class="absolute bottom-3 left-3">
+                            <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                                <i class="fas fa-car text-indigo-600 text-sm"></i>
                             </div>
                         </div>
                         <img src="images/visual inspection.png" 
                              alt="Vehicle Inspection" 
                              class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Vehicle Inspection</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
+                    <div class="p-4">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Vehicle Inspection</h3>
+                        <p class="text-gray-600 mb-3 leading-relaxed text-sm">
                             Comprehensive vehicle checks to ensure your safety on every journey.
                         </p>
-                        <div class="flex items-center text-indigo-600 font-semibold">
-                            <span>Book Inspection</span>
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Premium Car Accessories Section -->
-    <section id="accessories" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-serif">Premium Car Accessories</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Enhance your driving experience with luxury accessories and essentials</p>
+    <!-- Premium Car Accessories Section - MOBILE OPTIMIZED -->
+    <section id="accessories" class="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 font-serif">Premium Car Accessories</h2>
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">Enhance your driving experience with luxury accessories and essentials</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
                 <!-- Accessory 1 - Luxury Seat Covers -->
-                <div data-aos="fade-up" data-aos-delay="100" class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-amber-500 to-amber-600 relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="100" class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                    <div class="h-32 bg-gradient-to-br from-amber-500 to-amber-600 relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                                <i class="fas fa-chair text-amber-600 text-xl"></i>
+                        <div class="absolute bottom-2 left-2">
+                            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                <i class="fas fa-chair text-amber-600 text-xs"></i>
                             </div>
                         </div>
                         <img src="https://akstan001.github.io/makky-sDualCare/carSit1.jpeg" 
                              alt="Luxury Seat Covers" 
                              class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Luxury Seat Covers</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                    <div class="p-3">
+                        <h3 class="text-base font-bold text-gray-900 mb-1">Luxury Seat Covers</h3>
+                        <p class="text-gray-600 mb-2 leading-relaxed text-xs">
                             Premium leather and fabric seat covers for ultimate comfort and style.
                         </p>
-                        <div class="flex items-center text-amber-600 font-semibold text-sm">
-                            <span>Inquire Now</span>
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
+                        
                     </div>
                 </div>
 
                 <!-- Accessory 2 - Dash Covers -->
-                <div data-aos="fade-up" data-aos-delay="150" class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="150" class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                    <div class="h-32 bg-gradient-to-br from-blue-500 to-blue-600 relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                                <i class="fas fa-tachometer-alt text-blue-600 text-xl"></i>
+                        <div class="absolute bottom-2 left-2">
+                            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                <i class="fas fa-tachometer-alt text-blue-600 text-xs"></i>
                             </div>
                         </div>
                         <img src="https://m.media-amazon.com/images/I/41ezo0lGdrL.jpg" 
                              alt="Dash Covers" 
                              class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Premium Dash Covers</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                    <div class="p-3">
+                        <h3 class="text-base font-bold text-gray-900 mb-1">Premium Dash Covers</h3>
+                        <p class="text-gray-600 mb-2 leading-relaxed text-xs">
                             Protect and enhance your dashboard with custom-fit premium covers.
                         </p>
-                        <div class="flex items-center text-blue-600 font-semibold text-sm">
-                            <span>Inquire Now</span>
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
+                        
                     </div>
                 </div>
 
                 <!-- Accessory 3 - Sport Steering Covers -->
-                <div data-aos="fade-up" data-aos-delay="200" class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-red-500 to-red-600 relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="200" class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                    <div class="h-32 bg-gradient-to-br from-red-500 to-red-600 relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                                <i class="fas fa-car-crash text-red-600 text-xl"></i>
+                        <div class="absolute bottom-2 left-2">
+                            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                <i class="fas fa-car-crash text-red-600 text-xs"></i>
                             </div>
                         </div>
                         <img src="https://m.media-amazon.com/images/I/71fw5QllpbL.jpg" 
                              alt="Sport Steering Covers" 
                              class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Sport Steering Covers</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                    <div class="p-3">
+                        <h3 class="text-base font-bold text-gray-900 mb-1">Sport Steering Covers</h3>
+                        <p class="text-gray-600 mb-2 leading-relaxed text-xs">
                             Enhanced grip and sporty look with premium steering wheel covers.
                         </p>
-                        <div class="flex items-center text-red-600 font-semibold text-sm">
-                            <span>Inquire Now</span>
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
+                        
                     </div>
                 </div>
 
                 <!-- Accessory 4 - Lug Nuts -->
-                <div data-aos="fade-up" data-aos-delay="250" class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="250" class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                    <div class="h-32 bg-gradient-to-br from-purple-500 to-purple-600 relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                                <i class="fas fa-cog text-purple-600 text-xl"></i>
+                        <div class="absolute bottom-2 left-2">
+                            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                <i class="fas fa-cog text-purple-600 text-xs"></i>
                             </div>
                         </div>
                         <img src="https://akstan001.github.io/makky-sDualCare/tigerNut1.jpeg" 
                              alt="Lug Nuts" 
                              class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Chrome Lug Nuts</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                    <div class="p-3">
+                        <h3 class="text-base font-bold text-gray-900 mb-1">Chrome Lug Nuts</h3>
+                        <p class="text-gray-600 mb-2 leading-relaxed text-xs">
                             Durable and stylish chrome lug nuts for enhanced wheel appearance.
                         </p>
-                        <div class="flex items-center text-purple-600 font-semibold text-sm">
-                            <span>Inquire Now</span>
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
+                        
                     </div>
                 </div>
 
                 <!-- Accessory 5 - Chrome Finish -->
-                <div data-aos="fade-up" data-aos-delay="300" class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-600 relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="300" class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                    <div class="h-32 bg-gradient-to-br from-teal-500 to-teal-600 relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                                <i class="fas fa-sparkles text-teal-600 text-xl"></i>
+                        <div class="absolute bottom-2 left-2">
+                            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                <i class="fas fa-sparkles text-teal-600 text-xs"></i>
                             </div>
                         </div>
                         <img src="https://cdn11.bigcommerce.com/s-1gfd17pa/images/stencil/1280x1280/products/821191/1609737/Aftermarket-Wheels-Require-Aftermarket-Lugs-Chrome-or-Black-Lug-Nuts-or-Bolts-Set-for-4-Wheels-LN4W-BB-Wheels_1609736__55944.1706124942.jpg?c=2" 
                              alt="Chrome Finish" 
                              class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Chrome Finish Parts</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                    <div class="p-3">
+                        <h3 class="text-base font-bold text-gray-900 mb-1">Chrome Finish Parts</h3>
+                        <p class="text-gray-600 mb-2 leading-relaxed text-xs">
                             Premium chrome accessories for grilles, handles, and trim enhancement.
                         </p>
-                        <div class="flex items-center text-teal-600 font-semibold text-sm">
-                            <span>Inquire Now</span>
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
+                        
                     </div>
                 </div>
 
                 <!-- Accessory 6 - Tire Tubs -->
-                <div data-aos="fade-up" data-aos-delay="350" class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="350" class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                    <div class="h-32 bg-gradient-to-br from-green-500 to-green-600 relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                                <i class="fas fa-box text-green-600 text-xl"></i>
+                        <div class="absolute bottom-2 left-2">
+                            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                <i class="fas fa-box text-green-600 text-xs"></i>
                             </div>
                         </div>
                         <img src="https://m.media-amazon.com/images/I/81BmsJrp-hL._AC_SL1500_.jpg" 
                              alt="Tire Tubs" 
                              class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Tire Storage Tubs</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                    <div class="p-3">
+                        <h3 class="text-base font-bold text-gray-900 mb-1">Tire Storage Tubs</h3>
+                        <p class="text-gray-600 mb-2 leading-relaxed text-xs">
                             Durable storage solutions for spare tires and automotive equipment.
                         </p>
-                        <div class="flex items-center text-green-600 font-semibold text-sm">
-                            <span>Inquire Now</span>
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
+                       
                     </div>
                 </div>
 
                 <!-- Accessory 7 - Engine Oil -->
-                <div data-aos="fade-up" data-aos-delay="400" class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-indigo-600 relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="400" class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                    <div class="h-32 bg-gradient-to-br from-indigo-500 to-indigo-600 relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                                <i class="fas fa-oil-can text-indigo-600 text-xl"></i>
+                        <div class="absolute bottom-2 left-2">
+                            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                <i class="fas fa-oil-can text-indigo-600 text-xs"></i>
                             </div>
                         </div>
                         <img src="https://www.foxwooddiesel.com/assets/uploads/images/blog/_blogHero/869/what-causes-high-oil-consumption-in-diesel-engine.webp" 
                              alt="Engine Oil" 
                              class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Premium Engine Oil</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                    <div class="p-3">
+                        <h3 class="text-base font-bold text-gray-900 mb-1">Premium Engine Oil</h3>
+                        <p class="text-gray-600 mb-2 leading-relaxed text-xs">
                             High-quality engine oils for optimal performance and engine protection.
                         </p>
-                        <div class="flex items-center text-indigo-600 font-semibold text-sm">
-                            <span>Inquire Now</span>
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
+                        
                     </div>
                 </div>
 
                 <!-- Accessory 8 - Car Care Kit -->
-                <div data-aos="fade-up" data-aos-delay="450" class="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-600 relative overflow-hidden">
+                <div data-aos="fade-up" data-aos-delay="450" class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
+                    <div class="h-32 bg-gradient-to-br from-pink-500 to-pink-600 relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                                <i class="fas fa-spa text-pink-600 text-xl"></i>
+                        <div class="absolute bottom-2 left-2">
+                            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                <i class="fas fa-spa text-pink-600 text-xs"></i>
                             </div>
                         </div>
                         <img src="images/car care.png" 
                              alt="Car Care Products" 
                              class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Car Care Products</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                    <div class="p-3">
+                        <h3 class="text-base font-bold text-gray-900 mb-1">Car Care Products</h3>
+                        <p class="text-gray-600 mb-2 leading-relaxed text-xs">
                             Complete range of cleaning and maintenance products for your vehicle.
                         </p>
-                        <div class="flex items-center text-pink-600 font-semibold text-sm">
-                            <span>Inquire Now</span>
-                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Custom Quote Section -->
-    <section class="py-20 bg-gradient-to-r from-orange-50 to-amber-50">
-        <div class="container mx-auto px-6">
+    <!-- Custom Quote Section - MOBILE OPTIMIZED -->
+    <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-orange-50 to-amber-50">
+        <div class="container mx-auto px-4">
             <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
-                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-serif">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-serif">
                     Personalized Automotive Solutions
                 </h2>
-                <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
                     Every vehicle and driving need is unique. Get custom quotes for tyre services and premium accessories 
                     tailored to your specific requirements and preferences.
                 </p>
 
-                <div class="grid md:grid-cols-2 gap-8 mb-12">
-                    <div data-aos="fade-right" data-aos-delay="100" class="bg-white rounded-2xl p-8 shadow-xl border border-gray-200">
-                        <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-tools text-white text-2xl"></i>
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div data-aos="fade-right" data-aos-delay="100" class="bg-white rounded-xl sm:rounded-2xl p-6 shadow-lg border border-gray-200">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tools text-white text-lg"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Tyre Services Quote</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Tyre Services Quote</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">
                             Get personalized pricing for tyre fitting, alignment, balancing, and repair services.
                         </p>
-                        <a href="https://wa.me/2349059402473?text=Hi, I need tyre services:" target="_blank" class="inline-flex items-center bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+                        <a href="https://wa.me/2347073857015?text=Hi, I need tyre services:" target="_blank" class="inline-flex items-center bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-sm">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Service Quote
                         </a>
                     </div>
 
-                    <div data-aos="fade-left" data-aos-delay="200" class="bg-white rounded-2xl p-8 shadow-xl border border-gray-200">
-                        <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-star text-white text-2xl"></i>
+                    <div data-aos="fade-left" data-aos-delay="200" class="bg-white rounded-xl sm:rounded-2xl p-6 shadow-lg border border-gray-200">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-star text-white text-lg"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Accessories Quote</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Accessories Quote</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">
                             Get pricing for premium car accessories tailored to your vehicle and style preferences.
                         </p>
-                        <a href="https://wa.me/2349059402473?text=Hi, I'm interested in car accessories:" target="_blank" class="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+                        <a href="https://wa.me/2347073857015?text=Hi, I'm interested in car accessories:" target="_blank" class="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-sm">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Accessories Quote
                         </a>
@@ -541,36 +536,36 @@
         </div>
     </section>
 
-    <!-- Final CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-orange-500 to-amber-500 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl lg:text-5xl font-bold mb-6 font-serif" data-aos="fade-up">Ready to Enhance Your Ride?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90" data-aos="fade-up" data-aos-delay="100">
+    <!-- Final CTA Section - MOBILE OPTIMIZED -->
+    <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-orange-500 to-amber-500 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-serif" data-aos="fade-up">Ready to Enhance Your Ride?</h2>
+            <p class="text-base sm:text-lg md:text-xl mb-6 max-w-2xl mx-auto opacity-90" data-aos="fade-up" data-aos-delay="100">
                 Experience premium tyre services and luxury car accessories that transform your driving experience.
             </p>
-            <a href="https://wa.me/2349059402473?text=Hi, I'm interested in your tyre services and car accessories:" target="_blank" class="inline-flex items-center bg-white text-orange-600 hover:bg-gray-100 px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl" data-aos="fade-up" data-aos-delay="200">
-                <i class="fab fa-whatsapp mr-3 text-xl"></i>
+            <a href="https://wa.me/2347073857015?text=Hi, I'm interested in your tyre services and car accessories:" target="_blank" class="inline-flex items-center bg-white text-orange-600 hover:bg-gray-100 px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base" data-aos="fade-up" data-aos-delay="200">
+                <i class="fab fa-whatsapp mr-2 text-sm"></i>
                 Get Complete Quote
             </a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gradient-to-br from-gray-900 to-black text-white pt-16 pb-8">
-        <div class="container mx-auto px-6">
-            <div class="grid lg:grid-cols-4 gap-8 mb-12">
+    <!-- Footer - MOBILE OPTIMIZED -->
+    <footer class="bg-gradient-to-br from-gray-900 to-black text-white pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
                 <!-- Brand -->
-                <div>
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-                            <span class="text-white font-bold text-lg">MDC</span>
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">MDC</span>
                         </div>
                         <div>
-                            <span class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">MakkyDualCare</span>
+                            <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">MakkyDualCare</span>
                             <p class="text-xs text-gray-400 -mt-1">Premium Services</p>
                         </div>
                     </div>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
+                    <p class="text-gray-400 mb-4 leading-relaxed text-sm">
                         Excellence in automotive services, premium tyre care, and luxury car accessories. 
                         Complete automotive solutions for your needs.
                     </p>
@@ -578,18 +573,18 @@
 
                 <!-- Locations -->
                 <div>
-                    <h3 class="text-lg font-bold mb-6 text-white">Our Locations</h3>
-                    <div class="space-y-6">
+                    <h3 class="text-base font-bold mb-4 text-white">Our Locations</h3>
+                    <div class="space-y-4">
                         <div>
-                            <h4 class="font-semibold text-amber-400 mb-2">Main Office</h4>
-                            <p class="text-gray-400 text-sm leading-relaxed">
+                            <h4 class="font-semibold text-amber-400 mb-1 text-sm">Main Office</h4>
+                            <p class="text-gray-400 text-xs leading-relaxed">
                                 Opp Idi-Ere Soldier, Bakusa Junction, Ore, Ondo state<br>
                                 <span class="text-amber-400">Mon–Sun, 7AM – 7PM</span>
                             </p>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-amber-400 mb-2">Branch Office</h4>
-                            <p class="text-gray-400 text-sm leading-relaxed">
+                            <h4 class="font-semibold text-amber-400 mb-1 text-sm">Branch Office</h4>
+                            <p class="text-gray-400 text-xs leading-relaxed">
                                 Beside Alaya Junction, After Balogun second transformer, Tanke Oke-Odo, Ilorin, Kwara state.<br>
                                 <span class="text-amber-400">Mon–Sat, 8:30AM – 7PM</span>
                             </p>
@@ -599,37 +594,37 @@
 
                 <!-- Contact -->
                 <div>
-                    <h3 class="text-lg font-bold mb-6 text-white">Contact Info</h3>
-                    <div class="space-y-4">
-                        <a href="tel:+2349059402473" class="flex items-center text-gray-400 hover:text-white transition-all duration-300">
-                            <i class="fas fa-phone-alt mr-4 text-amber-400"></i>
-                            +2349059402473
+                    <h3 class="text-base font-bold mb-4 text-white">Contact Info</h3>
+                    <div class="space-y-2">
+                        <a href="tel:+2349059402473" class="flex items-center text-gray-400 hover:text-white transition-all duration-300 text-sm">
+                            <i class="fas fa-phone-alt mr-3 text-amber-400 text-xs"></i>
+                            +2348119898342
                         </a>
-                        <a href="https://wa.me/2349059402473" target="_blank" class="flex items-center text-gray-400 hover:text-white transition-all duration-300">
-                            <i class="fab fa-whatsapp mr-4 text-green-400"></i>
+                        <a href="https://wa.me/2347073857015" target="_blank" class="flex items-center text-gray-400 hover:text-white transition-all duration-300 text-sm">
+                            <i class="fab fa-whatsapp mr-3 text-green-400 text-xs"></i>
                             WhatsApp Quote
                         </a>
-                        <a href="mailto:akeemgbolahan58@gmail.com" class="flex items-center text-gray-400 hover:text-white transition-all duration-300">
-                            <i class="fas fa-envelope mr-4 text-blue-400"></i>
-                            akeemgbolahan58@gmail.com
+                        <a href="mailto:makkydualcare@gmail.com" class="flex items-center text-gray-400 hover:text-white transition-all duration-300 text-sm">
+                            <i class="fas fa-envelope mr-3 text-blue-400 text-xs"></i>
+                            makkydualcare@gmail.com
                         </a>
                     </div>
                 </div>
 
                 <!-- Quick Links -->
                 <div>
-                    <h3 class="text-lg font-bold mb-6 text-white">Quick Links</h3>
-                    <div class="space-y-3">
-                        <a href="index.html" class="block text-gray-400 hover:text-amber-400 transition-colors duration-300">Home</a>
-                        <a href="tyres.html" class="block text-gray-400 hover:text-amber-400 transition-colors duration-300">Makky's Autohub</a>
-                        <a href="laundry.html" class="block text-gray-400 hover:text-amber-400 transition-colors duration-300">Laundry Haven</a>
-                        <a href="index.html#contact" class="block text-gray-400 hover:text-amber-400 transition-colors duration-300">Contact Us</a>
+                    <h3 class="text-base font-bold mb-4 text-white">Quick Links</h3>
+                    <div class="space-y-2">
+                        <a href="index.html" class="block text-gray-400 hover:text-amber-400 transition-colors duration-300 text-sm">Home</a>
+                        <a href="tyres.html" class="block text-gray-400 hover:text-amber-400 transition-colors duration-300 text-sm">Makky's Autohub</a>
+                        <a href="laundry.html" class="block text-gray-400 hover:text-amber-400 transition-colors duration-300 text-sm">Laundry Haven</a>
+                        <a href="index.html#contact" class="block text-gray-400 hover:text-amber-400 transition-colors duration-300 text-sm">Contact Us</a>
                     </div>
                 </div>
             </div>
 
-            <div class="pt-8 border-t border-gray-800 text-center">
-                <p class="text-gray-400 text-sm">
+            <div class="pt-6 border-t border-gray-800 text-center">
+                <p class="text-gray-400 text-xs">
                     &copy; 2024 MakkyDualCare. All rights reserved. | 
                     <span class="text-amber-400">Complete Automotive Care</span>
                 </p>
